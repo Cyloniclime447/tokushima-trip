@@ -3,155 +3,222 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    content="width=device-width, initial-scale=1.0"
   >
 
-  <title>徳島旅行のしおり</title>
+  <title>旅のしおり</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
 </head>
+
 
 <body>
 
-  <div id="book">
+  <main class="book" id="book">
 
     <!-- 表紙 -->
-    <div class="page cover">
-      <h1>徳島旅行</h1>
+    <section class="page cover">
 
-      <p class="date">
-        2026.10.9 - 10
-      </p>
+      <div class="cover-inner">
 
-      <div class="cover-photo">
-        <img src="images/cover.jpg">
-      </div>
-
-      <p>
-        TRIP BOOK
-      </p>
-    </div>
-
-
-    <!-- 旅程 -->
-    <div class="page">
-
-      <h2>ITINERARY</h2>
-
-      <h3>10 / 9</h3>
-
-      <div class="schedule">
-
-        <p>
-          <span>10:25</span>
-          羽田空港 発
+        <p class="cover-label">
+          TRAVEL BOOK
         </p>
 
-        <p>
-          <span>11:45</span>
-          徳島空港 着
-        </p>
+        <h1>
+          徳島旅行
+        </h1>
 
-        <p>
-          <span>13:00</span>
-          ランチ
-        </p>
+        <div class="cover-line"></div>
 
-        <p>
-          <span>16:00</span>
-          宿チェックイン
+        <p class="cover-date">
+          2026.10.09 — 10.10
         </p>
 
       </div>
 
-    </div>
+    </section>
 
 
-    <!-- 観光 -->
-    <div class="page">
+    <!-- 通常ページ -->
+    <section class="page">
 
-      <h2>NARUTO</h2>
+      <header class="page-header">
 
-      <img
-        class="main-photo"
-        src="images/naruto.jpg"
-      >
+        <p class="page-number">
+          01
+        </p>
 
-      <p>
-        鳴門の渦潮を見に行く。
-      </p>
+        <h2>
+          JOURNEY
+        </h2>
 
-      <p>
-        潮見表を確認して、
-        見頃の時間に合わせたい。
-      </p>
+        <p class="page-subtitle">
+          旅の予定
+        </p>
 
-    </div>
+      </header>
 
 
-    <!-- 宿 -->
-    <div class="page">
+      <div class="page-body">
 
-      <h2>STAY</h2>
+        <div class="text-field">
 
-      <img
-        class="main-photo"
-        src="images/hotel.jpg"
-      >
+          <h3>
+            ここに小見出し
+          </h3>
 
-      <h3>鳴門のお宿</h3>
+          <p>
+            ここにテキストを書きます。
+            行程や説明、ちょっとしたメモなど、
+            自由に入力できます。
+          </p>
 
-      <p>
-        Check in<br>
-        16:00〜
-      </p>
-
-      <p>
-        Check out<br>
-        〜10:00
-      </p>
-
-    </div>
+        </div>
 
 
-    <!-- 持ち物 -->
-    <div class="page">
+        <div class="text-field">
 
-      <h2>PACKING</h2>
+          <h3>
+            ここに小見出し
+          </h3>
 
-      <label>
-        <input type="checkbox">
-        財布
-      </label>
+          <p>
+            ここに別の文章を書きます。
+          </p>
 
-      <label>
-        <input type="checkbox">
-        充電器
-      </label>
+        </div>
 
-      <label>
-        <input type="checkbox">
-        モバイルバッテリー
-      </label>
+      </div>
 
-      <label>
-        <input type="checkbox">
-        着替え
-      </label>
+    </section>
 
-      <label>
-        <input type="checkbox">
-        折りたたみ傘
-      </label>
 
-    </div>
+    <!-- ページ2 -->
+    <section class="page">
 
-  </div>
+      <header class="page-header">
+
+        <p class="page-number">
+          02
+        </p>
+
+        <h2>
+          DAY 1
+        </h2>
+
+        <p class="page-subtitle">
+          October 9
+        </p>
+
+      </header>
+
+
+      <div class="page-body">
+
+        <div class="text-field">
+
+          <h3>
+            MORNING
+          </h3>
+
+          <p>
+            ここにテキスト。
+          </p>
+
+        </div>
+
+
+        <div class="text-field">
+
+          <h3>
+            AFTERNOON
+          </h3>
+
+          <p>
+            ここにテキスト。
+          </p>
+
+        </div>
+
+
+        <div class="text-field">
+
+          <h3>
+            NIGHT
+          </h3>
+
+          <p>
+            ここにテキスト。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ページ3 -->
+    <section class="page">
+
+      <header class="page-header">
+
+        <p class="page-number">
+          03
+        </p>
+
+        <h2>
+          STAY
+        </h2>
+
+        <p class="page-subtitle">
+          宿泊
+        </p>
+
+      </header>
+
+
+      <div class="page-body">
+
+        <div class="text-field large">
+
+          <h3>
+            HOTEL
+          </h3>
+
+          <p>
+            宿についての情報。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- 下部ナビ -->
+
+  <nav class="bottom-nav">
+
+    <button onclick="movePage(-1)">
+      ←
+    </button>
+
+    <span id="pageIndicator">
+      1 / 4
+    </span>
+
+    <button onclick="movePage(1)">
+      →
+    </button>
+
+  </nav>
 
 
   <script src="script.js"></script>
