@@ -25,11 +25,15 @@ function movePage(direction) {
     );
 
 
+  const pageWidth =
+    book.clientWidth;
+
+
   book.scrollTo({
 
     left:
       currentPage
-      * window.innerWidth,
+      * pageWidth,
 
     behavior: "auto"
 
@@ -54,11 +58,14 @@ book.addEventListener(
   "scroll",
   () => {
 
+    const pageWidth =
+      book.clientWidth;
+
     currentPage =
       Math.round(
         book.scrollLeft
         /
-        window.innerWidth
+        pageWidth
       );
 
     updateIndicator();
