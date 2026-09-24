@@ -7,7 +7,6 @@ const pages =
 const indicator =
   document.getElementById("pageIndicator");
 
-
 let currentPage = 0;
 
 
@@ -24,21 +23,15 @@ function movePage(direction) {
       )
     );
 
-
   const pageWidth =
     book.clientWidth;
 
-
   book.scrollTo({
-
     left:
-      currentPage
-      * pageWidth,
+      currentPage * pageWidth,
 
     behavior: "auto"
-
   });
-
 
   updateIndicator();
 }
@@ -48,11 +41,8 @@ function updateIndicator() {
 
   indicator.textContent =
     `${currentPage + 1} / ${pages.length}`;
-
 }
 
-
-/* スワイプ時のページ番号更新 */
 
 book.addEventListener(
   "scroll",
@@ -63,8 +53,7 @@ book.addEventListener(
 
     currentPage =
       Math.round(
-        book.scrollLeft
-        /
+        book.scrollLeft /
         pageWidth
       );
 
@@ -72,3 +61,22 @@ book.addEventListener(
 
   }
 );
+
+
+window.addEventListener(
+  "resize",
+  () => {
+
+    book.scrollTo({
+      left:
+        currentPage *
+        book.clientWidth,
+
+      behavior: "auto"
+    });
+
+  }
+);
+
+
+updateIndicator();
