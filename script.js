@@ -1,28 +1,67 @@
-const pageFlip = new St.PageFlip(
-  document.getElementById("book"),
-  {
-    width: 390,
-    height: 700,
+const book =
+  document.getElementById("book");
 
-    size: "stretch",
+const pages =
+  document.querySelectorAll(".page");
 
-    minWidth: 300,
-    maxWidth: 500,
+const indicator =
+  document.getElementById("pageIndicator");
 
-    minHeight: 500,
-    maxHeight: 900,
 
-    showCover: true,
+let currentPage = 0;
 
-    mobileScrollSupport: false,
 
-    usePortrait: true,
+function movePage(direction) {
 
-    maxShadowOpacity: 0.3
+  currentPage += direction;
+
+  currentPage =
+    Math.max(
+      0,
+      Math.min(
+        currentPage,
+        pages.length - 1
+      )
+    );
+
+
+  book.scrollTo({
+
+    left:
+      currentPage
+      * window.innerWidth,
+
+    behavior: "auto"
+
+  });
+
+
+  updateIndicator();
+}
+
+
+function updateIndicator() {
+
+  indicator.textContent =
+    `${currentPage + 1} / ${pages.length}`;
+
+}
+
+
+/* スワイプ時のページ番号更新 */
+
+book.addEventListener(
+  "scroll",
+  () => {
+
+    currentPage =
+      Math.round(
+        book.scrollLeft
+        /
+        window.innerWidth
+      );
+
+    updateIndicator();
+
   }
-);
-
-
-pageFlip.loadFromHTML(
-  document.querySelectorAll(".page")
 );
