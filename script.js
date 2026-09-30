@@ -80,3 +80,18 @@ window.addEventListener(
 
 
 updateIndicator();
+
+const numberedPages =
+  document.querySelectorAll(".page:not(.cover):not(.appendix-page)");
+
+numberedPages.forEach((page, index) => {
+
+  const number =
+    page.querySelector(".page-number");
+
+  if (number) {
+    number.textContent =
+      String(index+2).padStart(2, "0");
+  }
+
+});
